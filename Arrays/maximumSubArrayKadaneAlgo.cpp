@@ -10,7 +10,7 @@ public:
         int max_sum = nums[0];
 
         for(int i=1; i<nums.size(); i++){
-            current_sum = max(nums[i], current_sum + nums[i]);
+            current_sum = max(nums[i], current_sum + nums[i]);  // restting of new subarray or continue with existing one is decided by this max
             max_sum = max(current_sum, max_sum);
         }
         return max_sum;
@@ -24,3 +24,5 @@ int main(){
 
     return 0;
 }
+
+// time complexity = O(n)
